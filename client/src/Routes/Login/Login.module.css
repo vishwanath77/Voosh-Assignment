@@ -1,0 +1,102 @@
+.loginbox {
+  width: 400px !important;
+  margin: 50px auto !important;
+  padding: 30px !important;
+  border-radius: 12px !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+  background-color: #ffffff !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+.loginText {
+  text-align: center !important;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  color: #333333 !important;
+  margin-bottom: 20px !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.loginbox .MuiOutlinedInput-root {
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  color: #555555 !important;
+}
+
+.loginbox .MuiInputLabel-outlined {
+  font-size: 14px !important;
+  color: #777777 !important;
+}
+
+.loginbox .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #3f51b5 !important;
+}
+
+.loginbutton {
+  background-color: #2c387e !important;
+  color: #ffffff !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  border-radius: 8px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+}
+
+.loginbutton:hover {
+  background-color: #e02f2cfb !important;
+}
+
+.loginGoogle {
+  background-color: #db4437 !important;
+  color: #ffffff !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  border-radius: 8px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+}
+
+.loginGoogle:hover {
+  background-color: #c53329 !important;
+}
+
+.loginbox span {
+  font-size: 18px ;
+  font-weight: 600 ;
+  color: #0077cc !important;
+  cursor: pointer !important;
+  transition: color 0.3s ease !important;
+}
+
+.loginbox span:hover {
+  color: #005999 !important;
+}
+
+.MuiCircularProgress-root {
+  color: #3f51b5 !important;
+}
+
+@media (max-width: 768px) {
+  .loginbox {
+    width: 90% !important;
+    padding: 20px !important;
+  }
+
+  .loginText {
+    font-size: 24px !important;
+  }
+
+  .loginbutton,
+  .loginGoogle {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+  }
+}

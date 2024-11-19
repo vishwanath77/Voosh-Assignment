@@ -1,0 +1,91 @@
+/* Container styling */
+.container {
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #ffffff !important;
+  border: 1px solid rgb(205, 70, 70) !important;
+  border-radius: 12px !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+  padding: 20px !important;
+  margin: 15px 0 !important;
+  transition: transform 0.3s ease !important;
+   box-shadow: 0.3s ease !important;
+}
+
+/* Hover effect for container */
+.container:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0px 6px 12px rgb(18, 216, 223) !important;
+}
+
+/* Styling for inner divs inside container */
+.container > div {
+  margin-bottom: 10px !important;
+  font-family: 'Roboto', sans-serif !important;
+  color: #333333 !important;
+  font-size: 16px !important;
+  padding: 12px !important;
+}
+
+/* First child inside container */
+.container > div:first-child {
+  font-size: 25px !important;
+  font-weight: 600 !important;
+}
+
+/* Last child inside container (buttons area) */
+.container > div:last-child {
+  display: flex !important;
+  gap: 10px !important;
+  justify-content: flex-end !important;
+  margin-top: 15px !important;
+}
+
+/* Delete Button */
+.deleteBtn {
+  background-color: #f68982 !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* Hover effect for delete button */
+.deleteBtn:hover {
+  background-color: #74e007 !important;
+}
+
+/* Edit Button */
+.editBtn {
+  background-color: #df4e10 !important;
+  color: #b9eb87 !important;
+  padding: 8px 16px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* Hover effect for edit button */
+.editBtn:hover {
+  background-color: #388e3c !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px !important;
+  }
+
+  .deleteBtn,
+  .editBtn {
+      padding: 6px 12px !important;
+      font-size: 12px !important;
+  }
+}

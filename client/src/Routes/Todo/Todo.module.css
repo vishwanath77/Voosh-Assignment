@@ -1,0 +1,35 @@
+.conatiner{
+    height: 10rem;
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between; 
+    align-items:center ;
+   
+}
+.todocontainer{
+    height: 30rem;
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(3,1fr);
+}
+.eachtodocontainer{
+    height: 30rem;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.todotext{
+    height: 3rem;
+    width: 100%;
+    background-color: rgb(65, 65, 162);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

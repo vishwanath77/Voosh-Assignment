@@ -1,0 +1,119 @@
+/* Navbar container */
+.navbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 15px 30px !important;
+  background-color: #C5ADC5 !important; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+/* Voosh Logo */
+.vooshLogo {
+  width: 150px !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease !important;
+}
+
+.vooshLogo:hover {
+  transform: scale(1.1) !important;
+}
+
+/* Button container */
+.btnbox {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+}
+
+/* Common button styles */
+.loginbtn, .signupbtn, .MuiButton-contained, .taskListBtn {
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  padding: 8px 20px !important;
+  border-radius: 8px !important;
+  background-color: transparent !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+/* Login Button */
+.loginbtn {
+  background-color: #5c6bc0 !important; /* Lighter shade of blue */
+  border-color: #5c6bc0 !important;
+}
+
+.loginbtn:hover {
+  background-color: #3949ab !important;
+  border-color: #3949ab !important;
+  transform: scale(1.05) !important;
+}
+
+/* Signup Button */
+.signupbtn {
+  background-color: #ff5722 !important; /* Distinct orange for signup */
+  border-color: #ff5722 !important;
+}
+
+.signupbtn:hover {
+  background-color: #e64a19 !important;
+  border-color: #e64a19 !important;
+  transform: scale(1.05) !important;
+}
+
+/* Task List Button */
+.taskListBtn {
+  background-color: #4caf50 !important; /* Green for tasks */
+  border-color: #4caf50 !important;
+}
+
+.taskListBtn:hover {
+  background-color: #388e3c !important;
+  border-color: #388e3c !important;
+  transform: scale(1.05) !important;
+}
+
+/* Logout Button (MuiButton-contained override) */
+.MuiButton-contained {
+  background-color: #f44336 !important; /* Red for logout */
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  padding: 8px 20px !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiButton-contained:hover {
+  background-color: #d32f2f !important;
+  transform: scale(1.05) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      padding: 10px 20px !important;
+  }
+
+  .vooshLogo {
+      margin-bottom: 15px !important;
+  }
+
+  .btnbox {
+      gap: 10px !important;
+      flex-wrap: wrap !important;
+  }
+
+  .loginbtn, .signupbtn, .MuiButton-contained, .taskListBtn {
+      width: 100% !important;
+      text-align: center !important;
+  }
+}
