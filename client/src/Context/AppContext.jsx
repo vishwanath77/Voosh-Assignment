@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+require("dotenv").config();
 
 export const AppContext = createContext();
 
@@ -21,7 +22,7 @@ const AppContextProvider = ({ children }) => {
     try {
       setsignupBtnLoading(true);
       const { FirstName, LastName, Email, Password } = signupdata;
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +46,7 @@ const AppContextProvider = ({ children }) => {
   const handlelogin = async (payload) => {
     try {
       setloginBtnLoading(true);
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +68,7 @@ const AppContextProvider = ({ children }) => {
     try {
       setdeleteBtnLoading(true);
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:3000/deletetask/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/deletetask/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -87,7 +88,7 @@ const AppContextProvider = ({ children }) => {
     try {
       setUpdateBtnLoading(true);
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:3000/updatetask/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/updatetask/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -112,7 +113,7 @@ const AppContextProvider = ({ children }) => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No token found");
 
-      const response = await fetch("http://localhost:3000/alltask", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/alltask`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -133,7 +134,7 @@ const AppContextProvider = ({ children }) => {
   const handleAddTask = async (payload) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/addtask", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/addtask`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -157,7 +158,7 @@ const AppContextProvider = ({ children }) => {
         status: status,
       };
       let updateResponse = await fetch(
-        "http://localhost:3000/updateTaskStatus/" + id,
+        `${process.env.REACT_APP_API_BASE_URL}/updateTaskStatus/` + id,
         {
           method: "PATCH",
           headers: {
