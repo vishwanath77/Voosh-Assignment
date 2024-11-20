@@ -21,7 +21,7 @@ const AppContextProvider = ({ children }) => {
     try {
       setsignupBtnLoading(true);
       const { FirstName, LastName, Email, Password } = signupdata;
-      const response = await fetch("http://localhost:7500/signup", {
+      const response = await fetch("http://localhost:3000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const AppContextProvider = ({ children }) => {
   const handlelogin = async (payload) => {
     try {
       setloginBtnLoading(true);
-      const response = await fetch("http://localhost:7500/login", {
+      const response = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const AppContextProvider = ({ children }) => {
     try {
       setdeleteBtnLoading(true);
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:7500/deletetask/${id}`, {
+      const response = await fetch(`http://localhost:3000/deletetask/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -87,7 +87,7 @@ const AppContextProvider = ({ children }) => {
     try {
       setUpdateBtnLoading(true);
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:7500/updatetask/${id}`, {
+      const response = await fetch(`http://localhost:3000/updatetask/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const AppContextProvider = ({ children }) => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No token found");
 
-      const response = await fetch("http://localhost:7500/alltask", {
+      const response = await fetch("http://localhost:3000/alltask", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -133,7 +133,7 @@ const AppContextProvider = ({ children }) => {
   const handleAddTask = async (payload) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:7500/addtask", {
+      const response = await fetch("http://localhost:3000/addtask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -157,7 +157,7 @@ const AppContextProvider = ({ children }) => {
         status: status,
       };
       let updateResponse = await fetch(
-        "http://localhost:7500/updateTaskStatus/" + id,
+        "http://localhost:3000/updateTaskStatus/" + id,
         {
           method: "PATCH",
           headers: {
